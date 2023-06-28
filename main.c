@@ -26,7 +26,7 @@ uint8_t msg[16] = { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x00, 0xFF, 0xEE, 
 
 	kuz_set_key( secret_key, &kuz_cntx );
 
-	kuz_encrypt( (const uint8_t *)msg, msg, &kuz_cntx );
+	kuz_encrypt_fast( (const uint8_t *)msg, msg, &kuz_cntx );
 
 		printbuf("CIF: ", msg, 16, "\r\n");
 
